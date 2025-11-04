@@ -1,0 +1,56 @@
+DefaultConfigs.json
+json
+{
+  "system": {
+    "log_level": "INFO",
+    "max_processes": 4,
+    "data_directory": "./data",
+    "output_directory": "./results"
+  },
+  "resources": {
+    "max_memory_gb": 16,
+    "gpu_ids": [0]
+  }
+}
+MainConfigs.json
+json
+{
+  "cameras": {
+    "camera_01": {
+      "url": "./data/videos/terminal_entrance.mp4",
+      "enabled": true,
+      "region": "entrance",
+      "resolution": "1920x1080"
+    },
+    "camera_02": {
+      "url": "./data/videos/security_checkpoint.mp4",
+      "enabled": true,
+      "region": "checkpoint",
+      "resolution": "1280x720"
+    }
+  },
+  "processes": {
+    "detection": {
+      "model_path": "./models/yolov11_detector.pth",
+      "confidence_threshold": 0.6,
+      "device": "cuda:0"
+    },
+    "feature_extraction": {
+      "model_path": "./models/osnet_feature_extractor.pth",
+      "feature_dim": 512,
+      "enable_autocorrelation": true
+    },
+    "tracking": {
+      "single_camera": {
+        "max_age": 30,
+        "min_hits": 3,
+        "iou_threshold": 0.3
+      },
+      "cross_camera": {
+        "appearance_threshold": 0.5,
+        "temporal_threshold_seconds": 60,
+        "topology_aware": true
+      }
+    }
+  }
+}
