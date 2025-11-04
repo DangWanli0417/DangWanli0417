@@ -1,16 +1,28 @@
-## Hi there 👋
+# Robust Multi-Camera Tracking in Terminal Environments 👋
 
-<!--
-**DangWanli0417/DangWanli0417** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+> **Official Implementation of the Manuscript**  
+> **"Robust Multi-Camera Tracking in Terminal Environments: A Spatio-Temporal-Appearance Fusion Approach"**  
+> *Submitted to The Visual Computer*  
+> **Authors:** Dang Wanli, Cheng Jian, Luo Qian, Zheng Huaiyu  
+> 
+> **If you use this code in your research, please consider citing our paper.**
+> *Citation format will be updated upon publication.*
 
-Here are some ideas to get you started:
+---
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## 🚀 Quick Start
+
+### Prerequisites
+- **Python** 3.8+
+- **PyTorch** 1.12.0+
+- **OpenCV** 4.5.0+
+- **Ubuntu** 20.04 LTS (recommended)
+
+### Installation
+```bash
+# Clone this repository
+git clone https://github.com/DangWanli0417/MTMCT-Airport-Terminal.git
+cd MTMCT-Airport-Terminal
+
+# Install dependencies
+pip install -r requirements.txt
